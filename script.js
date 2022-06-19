@@ -82,7 +82,14 @@ console.log(numberToText(47));
 console.log(numberToText(98));
 
 // 3. Написать функцию, которая заменяет в полученной строке большие буквы на маленькие, маленькие – на большие, а цифры – на знак нижнего подчеркивания.
-
+let word = 'JavaScript is Cool';
+function replaceLetter(str) {
+    let result = "";
+    for (let i of str)
+        result += i === i.toUpperCase() ? i.toLowerCase() : i.toUpperCase();
+    return result;
+}
+console.log(replaceLetter(word));
 
 // 4. Написать функцию, которая преобразует названия css-стилей с дефисом в название в СamelСase стиле: font-size в fontSize, background-color в backgroundColor, text-align в textAlign.
 // 5. Написать функцию, которая принимает словосочетание и превращает его в аббревиатуру. Например: cascading style sheets в CSS, объектно-ориентированное программирование в ООП.
